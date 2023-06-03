@@ -22,6 +22,27 @@
       "relation": "manyToMany",
       "target": "api::project.project",
       "inversedBy": "technologies"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Front-end",
+        "Back-end",
+        "Tools"
+      ],
+      "required": true
+    },
+    "importance": {
+      "type": "integer",
+      "required": false
     }
   }
 }

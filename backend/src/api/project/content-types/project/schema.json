@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,21 +18,37 @@
       "unique": true
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
-    "images": {
-      "allowedTypes": [
-        "images"
-      ],
+    "image": {
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "technologies": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::technology.technology",
       "mappedBy": "projects"
+    },
+    "url_live": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url_code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "importance": {
+      "type": "integer",
+      "required": false,
+      "unique": true
     }
   }
 }
