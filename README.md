@@ -2,7 +2,7 @@
 
 # Portfolio website
 
-All of the projects created and technologies I have learned are being passed through the headless CMS Strapi.
+My portfolio. All of the created projects, technologies I have learned and my experience are being passed through the headless CMS Strapi.
 
 ## Technologies
 

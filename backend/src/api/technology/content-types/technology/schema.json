@@ -36,7 +36,7 @@
       "enum": [
         "Front-end",
         "Back-end",
-        "Tools"
+        "Other"
       ],
       "required": true
     },

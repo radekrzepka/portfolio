@@ -1,5 +1,13 @@
+import Main from "./components/Main/Main";
+import SideBar from "./components/SideBar/SideBar";
+
 const App = () => {
-	return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+	return (
+		<div className="bg-websiteBackground pl-12 font-font text-whiteTextColor lg:flex lg:pl-24">
+			<SideBar />
+			<Main />
+		</div>
+	);
 };
 
 export default App;

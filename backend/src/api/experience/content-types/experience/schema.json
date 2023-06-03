@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobTitle": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "required": false,
+      "unique": false,
+      "type": "date"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
