@@ -10,7 +10,7 @@ const client = new ApolloClient({
 const App = () => {
 	return (
 		<ApolloProvider client={client}>
-			<div className="bg-websiteBackground pl-6 pt-12 font-font text-whiteTextColor lg:flex lg:px-24 lg:pt-0">
+			<div className="bg-websiteBackground pl-6 pt-12 font-font text-whiteTextColor lg:grid lg:grid-cols-[3fr_5fr] lg:px-24 lg:pt-0">
 				<SideBar />
 				<Main />
 			</div>

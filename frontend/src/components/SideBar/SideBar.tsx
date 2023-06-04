@@ -26,7 +26,7 @@ const SideBar = () => {
 					</li>
 				</ul>
 			</nav>
-			<ul className="flex w-1/2 gap-3 xl:w-2/6">
+			<ul className="flex gap-8">
 				<SocialMediaItem
 					href="https://github.com/radekrzepka"
 					imgSrc={GitHubIcon}
