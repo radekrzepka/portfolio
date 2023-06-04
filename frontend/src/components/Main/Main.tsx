@@ -1,9 +1,11 @@
 import AboutMe from "./AboutMe/AboutMe";
+import Experiences from "./Experiences/Experiences";
 
 const Main = () => {
 	return (
-		<div className="h-[200vh] pr-20 pt-16">
+		<div className="min-h-screen pr-4 xl:ml-20">
 			<AboutMe />
+			<Experiences />
 		</div>
 	);
 };

@@ -54,15 +54,15 @@ const TechnologyCategory = (props: Props) => {
 
 	return (
 		<div>
-			<p>{props.displayName}</p>
-			<div className="flex flex-wrap">
+			<h4 className="text-xl text-whiteHeadersColor">{props.displayName}</h4>
+			<div className="mb-8 flex flex-wrap">
 				{data?.technologies.data.map(technology => (
 					<div
 						key={technology.attributes.name}
-						className="m-1 flex w-max flex-col items-center justify-center bg-whiteHeadersColor"
+						className="m-1 flex w-max flex-col items-center justify-center rounded-md bg-[#112240] p-3 shadow-xl"
 					>
 						<img
-							className="h-6 w-6"
+							className="h-10 w-10"
 							src={`http://localhost:1337${technology.attributes.icon.data?.attributes.url}`}
 							alt={
 								technology.attributes.icon.data?.attributes.alternativeText
@@ -70,7 +70,9 @@ const TechnologyCategory = (props: Props) => {
 									: `Ikona ${technology.attributes.name}`
 							}
 						/>
-						<p>{technology.attributes.name}</p>
+						<p className="mt-2 text-xs font-bold text-slate-200">
+							{technology.attributes.name}
+						</p>
 					</div>
 				))}
 			</div>
