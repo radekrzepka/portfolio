@@ -40,7 +40,7 @@ const Project: React.FC<Props> = ({ data }) => {
 					data.image.data[0].attributes.url
 				}`}
 				alt={`Zdjęcie projektu ${data.name}`}
-				className="mb-6 rounded border border-whiteTextColor shadow-xl md:w-1/2 lg:mr-3 lg:h-full lg:w-1/2"
+				className="my-6 rounded border border-whiteTextColor shadow-xl md:w-1/2 lg:mr-3 lg:h-full lg:w-1/2"
 			/>
 			<div className="lg:ml-6">
 				<p className="mb-6 text-3xl text-whiteHeadersColor">{data.name}</p>
@@ -56,7 +56,7 @@ const Project: React.FC<Props> = ({ data }) => {
 					))}
 				</div>
 
-				<div className="my-6 ml-1 flex">
+				<div className="ml-1 mt-6 flex">
 					<a href={data.url_code} target="_blank" rel="noopener noreferrer">
 						<img
 							src={GitHubIcon}
