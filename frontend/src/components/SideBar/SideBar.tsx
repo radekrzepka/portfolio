@@ -21,9 +21,6 @@ const SideBar = () => {
 					<li className="mb-5 transition hover:text-whiteHeadersColor">
 						<a href="#projects">Projekty</a>
 					</li>
-					<li className="mb-5 transition hover:text-whiteHeadersColor">
-						<a href="#contact">Kontakt</a>
-					</li>
 				</ul>
 			</nav>
 			<ul className="flex gap-8">

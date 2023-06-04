@@ -59,7 +59,7 @@ const TechnologyCategory = (props: Props) => {
 				{data?.technologies.data.map(technology => (
 					<div
 						key={technology.attributes.name}
-						className="m-1 flex w-max flex-col items-center justify-center rounded-md bg-[#112240] p-3 shadow-xl"
+						className="m-1 flex w-max flex-col items-center justify-center rounded-md bg-[#112240] px-6 py-3 shadow-xl"
 					>
 						<img
 							className="h-10 w-10"

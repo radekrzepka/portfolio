@@ -5,29 +5,29 @@ type QueryData = {
 	projects: {
 		data: [
 			{
-				attributes: {
-					name: string;
-					image: {
-						data: {
+				name: string;
+				image: {
+					data: [
+						{
 							attributes: {
 								url: string;
 								alternativeText: string;
 							};
-						};
-					};
-					desciption: string;
-					url_live: string;
-					url_code: string;
-					importance: number;
-					technologies: {
-						data: [
-							{
-								attributes: {
-									name: string;
-								};
-							}
-						];
-					};
+						}
+					];
+				};
+				desciption: string;
+				url_live: string;
+				url_code: string;
+				importance: number;
+				technologies: {
+					data: [
+						{
+							attributes: {
+								name: string;
+							};
+						}
+					];
 				};
 			}
 		];
