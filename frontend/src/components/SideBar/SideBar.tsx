@@ -7,7 +7,7 @@ const SideBar = () => {
 	return (
 		<div className="pt-16 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
 			<div className="text-whiteHeadersColor">
-				<h1 className="mb-6 text-5xl">Radosław Rzepka</h1>
+				<h1 className="mb-6 text-5xl font-bold">Radosław Rzepka</h1>
 				<h2 className="mb-6 text-2xl">Frontend developer</h2>
 			</div>
 			<nav className="text-xl uppercase">

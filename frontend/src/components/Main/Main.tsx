@@ -1,9 +1,11 @@
-import React from "react";
+import AboutMe from "./AboutMe/AboutMe";
 
-type Props = {};
-
-const Main = (props: Props) => {
-	return <div className="h-[200vh]">Main</div>;
+const Main = () => {
+	return (
+		<div className="h-[200vh] pr-20 pt-16">
+			<AboutMe />
+		</div>
+	);
 };
 
 export default Main;
