@@ -16,7 +16,7 @@ interface Props {
 				}
 			];
 		};
-		desciption: string;
+		description: string;
 		url_live: string;
 		url_code: string;
 		importance: number;
@@ -36,14 +36,16 @@ const Project: React.FC<Props> = ({ data }) => {
 	return (
 		<div className="lg:flex">
 			<img
-				src={`http://localhost:1337${data.image.data[0].attributes.url}`}
+				src={`${import.meta.env.VITE_STRAPI_API_URL}${
+					data.image.data[0].attributes.url
+				}`}
 				alt={`Zdjęcie projektu ${data.name}`}
 				className="mb-6 rounded border border-whiteTextColor shadow-xl md:w-1/2 lg:mr-3 lg:h-full lg:w-1/2"
 			/>
 			<div className="lg:ml-6">
 				<p className="mb-6 text-3xl text-whiteHeadersColor">{data.name}</p>
-				<ReactMarkdown>{data.description}</ReactMarkdown>
-				<div className="mt-6 flex flex-wrap gap-3 ">
+				<ReactMarkdown className="markdown">{data.description}</ReactMarkdown>
+				<div className="mt-6 flex flex-wrap gap-3">
 					{data.technologies.data.map(technology => (
 						<div
 							key={technology.attributes.name}

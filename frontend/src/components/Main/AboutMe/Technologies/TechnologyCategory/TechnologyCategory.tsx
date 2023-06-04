@@ -63,7 +63,9 @@ const TechnologyCategory = (props: Props) => {
 					>
 						<img
 							className="h-10 w-10"
-							src={`http://localhost:1337${technology.attributes.icon.data?.attributes.url}`}
+							src={`${import.meta.env.VITE_STRAPI_API_URL}${
+								technology.attributes.icon.data?.attributes.url
+							}`}
 							alt={
 								technology.attributes.icon.data?.attributes.alternativeText
 									? technology.attributes.icon.data?.attributes.alternativeText
