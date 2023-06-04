@@ -68,7 +68,7 @@ const Project: React.FC<Props> = ({ data }) => {
 						<img
 							src={WebIcon}
 							alt="Ikona przenosząca do wersji live tego projektu"
-							className="h-7 w-7"
+							className="mb-6 h-7 w-7"
 						/>
 					</a>
 				</div>
