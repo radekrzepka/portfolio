@@ -43,7 +43,7 @@ const Project: React.FC<Props> = ({ data }) => {
 				className="my-6 rounded border border-whiteTextColor shadow-xl md:w-1/2 lg:mr-3 lg:h-full lg:w-1/2"
 			/>
 			<div className="lg:ml-6">
-				<p className="mb-6 text-3xl text-whiteHeadersColor">{data.name}</p>
+				<p className="my-6 text-3xl text-whiteHeadersColor">{data.name}</p>
 				<ReactMarkdown className="markdown">{data.description}</ReactMarkdown>
 				<div className="mt-6 flex flex-wrap gap-3">
 					{data.technologies.data.map(technology => (
