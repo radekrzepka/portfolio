@@ -9,5 +9,3 @@ My portfolio. All of the created projects, technologies I have learned and my ex
 - Tailwind CSS
 - Strapi
 - GraphQL
-
-## Live
