@@ -36,9 +36,10 @@
       "enum": [
         "Front-end",
         "Back-end",
-        "Other"
+        "Other",
+        "None"
       ],
-      "required": true
+      "required": false
     },
     "importance": {
       "type": "integer",
