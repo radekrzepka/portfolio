@@ -19,8 +19,13 @@ const Experience = (props: Props) => {
 	return (
 		<div className="mb-8 xl:flex">
 			<div className="mt-2 text-xs font-bold uppercase lg:flex-grow-[2] lg:pr-20">
-				{startDateMonth}.{startDateYear} -
-				{props.data.endDate ? `${endDateMonth}.${endDateYear}` : " nadal"}
+				<p className="inline">
+					{startDateMonth}.{startDateYear}
+				</p>
+				<p className="inline"> - </p>
+				<p className="inline">
+					{props.data.endDate ? `${endDateMonth}.${endDateYear}` : " nadal"}
+				</p>
 			</div>
 			<div className="">
 				<p className="mb-2 text-xl text-whiteHeadersColor">
