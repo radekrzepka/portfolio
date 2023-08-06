@@ -21,7 +21,7 @@ const TechnologyItem: FC<TechnologyItemProps> = ({ technology }) => {
             src={iconSrc}
             alt={`Ikona ${technology.attributes.name}`}
          />
-         <p className="font-bold">{technology.attributes.name}</p>
+         <p className="mt-2 font-bold">{technology.attributes.name}</p>
       </div>
    );
 };
