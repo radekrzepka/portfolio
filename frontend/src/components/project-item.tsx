@@ -14,35 +14,24 @@ interface ProjectItemProps {
 }
 
 const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
-   const [active, setActive] = useState(false);
    const imageSrc = `https://portfolio-e7x6z.ondigitalocean.app${project.attributes.image.data[0].attributes.url}`;
-
-   const handleMouseOver = () => {
-      setActive(true);
-   };
-
-   const handleMouseOut = () => {
-      setActive(false);
-   };
 
    return (
       <button
-         className={`block rounded-xl p-4 pt-2 text-left lg:flex lg:hover:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg`}
-         // href={project.attributes.url_live}
-         // target="_blank"
-         rel="noopener noreferrer"
-         onMouseOver={handleMouseOver}
-         onMouseOut={handleMouseOut}
+         className={`block rounded-xl p-4 pt-2 text-left hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg lg:grid lg:grid-cols-[350px_auto]`}
+         onClick={() => {
+            window.open(project.attributes.url_live, "_blank");
+         }}
       >
          <Image
             src={imageSrc}
             alt={`Zdjęcie projektu ${project.attributes.name}`}
-            className="my-6 rounded shadow-xl md:w-1/2 lg:mr-3 lg:h-full"
+            className="my-6 rounded shadow-xl lg:mr-3 "
             blurDataURL={"./../assets/1x1.png"}
             unoptimized={true}
             loader={() => imageSrc}
-            width={500}
-            height={250}
+            width={350}
+            height={175}
             placeholder="blur"
          />
          <div className="lg:ml-6">
@@ -62,28 +51,29 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
             </div>
 
             <div className="ml-1 mt-6 flex">
-               <Link
-                  href={project.attributes.url_code}
-                  target="_blank"
-                  rel="noopener noreferrer"
+               <button
+                  onClick={() => {
+                     window.open(project.attributes.url_code, "_blank");
+                  }}
                >
                   <Image
                      src={GitHubIcon}
                      alt={`Ikona przenosząca do Githuba projektu ${project.attributes.name}`}
                      className="mr-6 h-7 w-7"
                   />
-               </Link>
-               <Link
+               </button>
+               <button
                   href={project.attributes.url_live}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => {
+                     window.open(project.attributes.url_live, "_blank");
+                  }}
                >
                   <Image
                      src={WebIcon}
                      alt={`Ikona przenosząca do strony projektu ${project.attributes.name}`}
                      className="mr-6 h-7 w-7"
                   />
-               </Link>
+               </button>
             </div>
          </div>
       </button>
