@@ -1,3 +1,4 @@
+import { FC } from "react";
 import type { Experience } from "../types/experience";
 import ExperienceItem from "@/components/experience-item";
 
@@ -13,7 +14,7 @@ const getExperiences = async () => {
    return res.json();
 };
 
-export default async function Experience() {
+const Experience: FC = async () => {
    const { data: experiences } = await getExperiences();
 
    experiences.sort((experience1: Experience, experience2: Experience) => {
@@ -46,4 +47,6 @@ export default async function Experience() {
             ))}
       </>
    );
-}
+};
+
+export default Experience;
