@@ -32,7 +32,7 @@ export default async function Home() {
    ];
    return (
       <>
-         <p className="mb-6 mt-4 text-5xl font-bold">Witaj !</p>
+         <p className="mb-6 mt-4 text-3xl font-bold md:text-5xl">Witaj !</p>
          <p className="mb-3">
             Cześć! Jestem Radek, front-end developer z pasją do tworzenia
             funkcjonalnych i estetycznych stron oraz aplikacji internetowych

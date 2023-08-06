@@ -18,12 +18,10 @@ export default function RootLayout({
 }) {
    return (
       <html lang="pl">
-
-
          <body
             className={classNames(
                nunitoSans.className,
-               "grid justify-start bg-background px-7 pt-6 text-text lg:grid-cols-2",
+               "grid bg-background px-7 pt-6 text-text lg:grid-cols-2",
             )}
          >
             <Navigation />

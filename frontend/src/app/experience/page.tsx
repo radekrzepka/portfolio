@@ -27,7 +27,10 @@ export default async function Experience() {
 
    return (
       <>
-         <h2 className="mb-6 mt-4 text-5xl font-bold" id="experience">
+         <h2
+            className="mb-6 mt-4 text-3xl font-bold md:text-5xl"
+            id="experience"
+         >
             Doświadczenie
          </h2>
          {experiences

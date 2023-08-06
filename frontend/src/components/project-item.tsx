@@ -26,10 +26,10 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
    };
 
    return (
-      <Link
-         className={`rounded-xl p-4 pt-2 text-left lg:flex lg:hover:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg`}
-         href={project.attributes.url_live}
-         target="_blank"
+      <button
+         className={`block rounded-xl p-4 pt-2 text-left lg:flex lg:hover:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg`}
+         // href={project.attributes.url_live}
+         // target="_blank"
          rel="noopener noreferrer"
          onMouseOver={handleMouseOver}
          onMouseOut={handleMouseOut}
@@ -38,10 +38,12 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
             src={imageSrc}
             alt={`Zdjęcie projektu ${project.attributes.name}`}
             className="my-6 rounded shadow-xl md:w-1/2 lg:mr-3 lg:h-full"
+            blurDataURL={"./../assets/1x1.png"}
             unoptimized={true}
             loader={() => imageSrc}
-            width={400}
-            height={200}
+            width={500}
+            height={250}
+            placeholder="blur"
          />
          <div className="lg:ml-6">
             <p className="my-6 text-3xl">{project.attributes.name}</p>
@@ -84,7 +86,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
                </Link>
             </div>
          </div>
-      </Link>
+      </button>
    );
 };
 

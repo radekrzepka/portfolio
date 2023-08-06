@@ -9,7 +9,6 @@ const getProjects = async () => {
    if (!res.ok) {
       throw new Error("Failed to fetch data");
    }
-
    return res.json();
 };
 
@@ -17,7 +16,10 @@ export default async function Projects() {
    const projects = await getProjects();
    return (
       <>
-         <h2 className="mb-6 mt-4 text-5xl font-bold" id="experience">
+         <h2
+            className="mb-6 mt-4 text-3xl font-bold md:text-5xl"
+            id="experience"
+         >
             Projekty
          </h2>
          {projects.data
