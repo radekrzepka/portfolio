@@ -4,8 +4,8 @@ My portfolio. All of the created projects, technologies I have learned and my ex
 
 ## Technologies
 
-- React
-- TypeScript
-- Tailwind CSS
-- Strapi
-- GraphQL
+-  Next.js
+-  TypeScript
+-  Tailwind CSS
+-  Strapi
+-  Tanstack Query
