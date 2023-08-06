@@ -63,7 +63,6 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
                   />
                </button>
                <button
-                  href={project.attributes.url_live}
                   onClick={() => {
                      window.open(project.attributes.url_live, "_blank");
                   }}
