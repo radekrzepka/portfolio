@@ -13,7 +13,7 @@ const getProjects = async () => {
    return res.json();
 };
 
-const Projects = async () => {
+export default async function Projects() {
    const projects = await getProjects();
    return (
       <>
@@ -31,6 +31,4 @@ const Projects = async () => {
             ))}
       </>
    );
-};
-
-export default Projects;
+}
