@@ -1,6 +1,7 @@
+"use client";
+
 import { Experience } from "@/app/types/experience";
 import { FC } from "react";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 interface ExperienceItemProps {
    experience: Experience;
@@ -13,7 +14,12 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
       : ["", ""];
 
    return (
-      <div className="mb-8 xl:grid xl:grid-cols-[200px_auto]">
+      <button
+         className="mb-8 w-full rounded-xl p-4 text-left hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg xl:grid xl:grid-cols-[200px_auto]"
+         onClick={() => {
+            window.open(experience.attributes.description, "_blank");
+         }}
+      >
          <div className="mt-2 text-xs font-bold uppercase lg:flex-grow-[2] lg:pr-20">
             <p className="inline">
                {startMonth}.{startYear}
@@ -22,15 +28,14 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ experience }) => {
             <p className="inline">
                {experience.attributes.endDate
                   ? `${endMonth}.${endYear}`
-                  : " nadal"}
+                  : "nadal"}
             </p>
          </div>
-         <div className="">
-            <p className="mb-2 text-xl">{experience.attributes.jobTitle}</p>
+         <div>
+            <p className="text-3xl">{experience.attributes.jobTitle}</p>
             <p className="mb-4">{experience.attributes.companyName}</p>
-            <ReactMarkdown>{experience.attributes.description}</ReactMarkdown>
          </div>
-      </div>
+      </button>
    );
 };
 
