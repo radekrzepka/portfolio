@@ -24,7 +24,7 @@ export default function RootLayout({
          <body
             className={classNames(
                nunitoSans.className,
-               "grid bg-background px-7 pt-6 text-text lg:grid-cols-2",
+               "grid bg-background px-7 pt-6 text-text lg:grid-cols-[2fr_3fr]",
             )}
          >
             <Navigation />
