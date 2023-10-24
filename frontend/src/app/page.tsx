@@ -34,15 +34,13 @@ export default async function Home() {
       <>
          <p className="mb-6 mt-4 text-3xl font-bold md:text-5xl">Witaj !</p>
          <p className="mb-3 lg:ml-4">
-            Cześć! Jestem Radek, front-end developer z pasją do tworzenia
-            funkcjonalnych i estetycznych stron oraz aplikacji internetowych
+            Cześć, jestem Radek. Specjalizuję się w front-endzie, głównie w{" "}
+            <b>Next.js</b>, <b>React</b>, <b>TypeScript</b> i <b>Tailwind</b>.
          </p>
          <p className="mb-3 lg:ml-4">
-            Choć obecnie skupiam się na front-endzie, moją przyszłościową
-            ambicją jest stać się full-stack developerem. Dlatego nieustannie
-            poszerzam swoją wiedzę i umiejętności w dziedzinie back-endu, aby
-            móc tworzyć kompleksowe rozwiązania i oferować użytkownikom pełne
-            doświadczenie w korzystaniu z aplikacji.
+            Choć obecnie większą wiedzę posiadam w dziedzinie front-endu, moim
+            celem jest stać się full-stack developerem, dlatego nieustannie
+            poszerzam swoją wiedzę i umiejętności w dziedzinie back-endu.
          </p>
          <p className="mb-3 lg:ml-4">
             Jestem otwarty na współpracę i nowe wyzwania. Jeśli jesteś
@@ -53,12 +51,12 @@ export default async function Home() {
             pracy. Chętnie poznam ludzi, którzy podzielają moje zainteresowania
             i miłość do rozwoju w branży technologicznej.
          </p>
-         <p className="mb-3 lg:ml-4">
+         <h4 className="mb-3 text-2xl font-bold lg:ml-4">
             Technologie i narzędzia z których korzystam:
-         </p>
+         </h4>
          {categories.map((category) => (
             <div key={category.name} className="lg:ml-4">
-               <h4 className="text-xl">{category.displayName}</h4>
+               <h4 className="text-xl font-bold">{category.displayName}</h4>
                <div className="flex flex-wrap">
                   {technologies.data
                      .filter(
